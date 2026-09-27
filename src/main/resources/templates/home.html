@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF Demo</title>
+</head>
+
+<body>
+
+<h1>CSRF Demo</h1>
+
+<p>
+    Connected as:
+    <strong th:text="${username}"></strong>
+</p>
+
+<p>
+    Current email:
+    <strong th:text="${email}"></strong>
+</p>
+
+<hr>
+
+<h2>Change email normally</h2>
+
+<form action="/account/change-email" method="POST">
+
+    <input
+            type="email"
+            name="email"
+            placeholder="New email"
+    >
+
+    <button type="submit">
+        Change email
+    </button>
+
+</form>
+
+</body>
+</html>
